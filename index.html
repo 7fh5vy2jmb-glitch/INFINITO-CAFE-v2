@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Infinito Café</title>
+  <meta name="description" content="Infinito Café: café de especialidad, frappes y smoothies en un espacio de muros de cantera y madera. Carta, horario y fotos del local.">
+  <meta name="theme-color" content="#15110e">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Infinito Café">
+  <meta property="og:description" content="Café, frappes y smoothies en un espacio de cantera y madera.">
+  <meta property="og:image" content="intro-800.webp">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" as="image" href="intro-800.webp" imagesrcset="intro-800.webp 800w, intro-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* La intro se muestra una vez por sesión */
+    try { if (sessionStorage.getItem('infinito-intro')) document.documentElement.classList.add('no-intro'); } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Infinito Café",
+    "servesCuisine": "Café",
+    "priceRange": "$",
+    "currenciesAccepted": "MXN",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "21:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "20:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <img class="intro__img" src="intro-800.webp" srcset="intro-800.webp 800w, intro-1600.webp 1600w" sizes="100vw" width="1600" height="2844" alt="">
+    <div class="intro__shade"></div>
+    <div class="intro__text">
+      <h1 class="intro__name">Infinito</h1>
+      <span class="intro__sub">Café</span>
+    </div>
+  </div>
+
+  <header class="nav pad" id="nav">
+    <a href="#inicio" class="nav__brand">Infinito <em>Café</em></a>
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#bar">Bar</a>
+      <a href="#carta">Carta</a>
+      <a href="#espacio">Espacio</a>
+      <a href="#horario">Horario</a>
+    </nav>
+  </header>
+
+  <!-- Barra inferior en pantallas pequeñas -->
+  <nav class="tabbar" aria-label="Secciones">
+    <a href="#bar">Bar</a>
+    <a href="#carta">Carta</a>
+    <a href="#espacio">Espacio</a>
+    <a href="#horario">Horario</a>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <img class="hero__img" src="intro-800.webp" srcset="intro-800.webp 800w, intro-1600.webp 1600w" sizes="100vw" width="1600" height="2844" fetchpriority="high" decoding="async" alt="Barra de madera y lámparas colgantes en Infinito Café">
+      <div class="hero__shade"></div>
+      <div class="hero__content pad">
+        <p class="eyebrow">Café · Frappes · Smoothies</p>
+        <h2>Un espacio para quedarse<br><em>un rato más.</em></h2>
+      </div>
+    </section>
+
+    <!-- BAR -->
+    <section class="split pad" id="bar">
+      <figure class="split__media reveal">
+        <img src="maquina-800.webp" srcset="maquina-800.webp 800w, maquina-1600.webp 1600w" sizes="(max-width:900px) 100vw, 55vw" width="1600" height="900" loading="lazy" decoding="async" alt="Máquina de espresso Faema sobre barra de madera">
+      </figure>
+      <div class="split__text reveal">
+        <p class="eyebrow">El bar</p>
+        <h3>Espresso en barra de nogal</h3>
+        <p>Máquina Faema, molino a la vista y vitrina con galletas y barras de granola. Todo lo necesario, sin ruido de más.</p>
+      </div>
+    </section>
+
+    <section class="split split--rev pad">
+      <figure class="split__media reveal">
+        <img src="bar-800.webp" srcset="bar-800.webp 800w, bar-1600.webp 1600w" sizes="(max-width:900px) 100vw, 55vw" width="1600" height="900" loading="lazy" decoding="async" alt="Vista desde la entrada hacia el bar, con lámparas y repisas de jarabes">
+      </figure>
+      <div class="split__text reveal">
+        <p class="eyebrow">La luz</p>
+        <h3>Cálida, baja, constante</h3>
+        <p>Lámparas de vidrio ahumado, riel de luz y muros de cantera. El ambiente cambia con la hora, el café no.</p>
+      </div>
+    </section>
+
+    <!-- CARTA -->
+    <section class="carta pad" id="carta">
+      <div class="carta__head reveal">
+        <p class="eyebrow">La carta</p>
+        <h3>Clásicos &amp; más</h3>
+        <div class="cur" role="group" aria-label="Moneda de los precios">
+          <button type="button" class="cur__btn" data-cur="MXN" aria-pressed="true">MXN <small>Peso</small></button>
+          <button type="button" class="cur__btn" data-cur="USD" aria-pressed="false">USD <small>Dólar</small></button>
+          <button type="button" class="cur__btn" data-cur="EUR" aria-pressed="false">EUR <small>Euro</small></button>
+        </div>
+      </div>
+
+      <div class="carta__grid">
+        <div class="carta__col reveal">
+          <h4>Clásicos <span class="sizes"><i>CH</i><i>MD</i><i>G</i></span></h4>
+          <ul class="prices">
+            <li><span>Espresso</span><b data-p="40">$40</b><b aria-hidden="true"></b><b aria-hidden="true"></b></li>
+            <li><span>Americano</span><b data-p="40">$40</b><b data-p="43">$43</b><b data-p="47">$47</b></li>
+            <li><span>Americano c/leche</span><b data-p="44">$44</b><b data-p="47">$47</b><b data-p="50">$50</b></li>
+            <li><span>Latte / Capuccino</span><b data-p="46">$46</b><b data-p="50">$50</b><b data-p="57">$57</b></li>
+            <li><span>Moka</span><b data-p="50">$50</b><b data-p="54">$54</b><b data-p="60">$60</b></li>
+            <li><span>Caramel</span><b data-p="55">$55</b><b data-p="60">$60</b><b data-p="65">$65</b></li>
+            <li><span>Chai Latte</span><b data-p="59">$59</b><b data-p="63">$63</b><b data-p="67">$67</b></li>
+            <li><span>Chocolate</span><b data-p="45">$45</b><b data-p="50">$50</b><b data-p="55">$55</b></li>
+          </ul>
+          <h4>Extras</h4>
+          <ul class="prices prices--single">
+            <li><span>Shot</span><b data-p="15">$15</b></li>
+            <li><span>Jarabe</span><b data-p="15">$15</b></li>
+            <li><span>Chantilly</span><b data-p="10">$10</b></li>
+            <li><span>Soya</span><b data-p="10">$10</b></li>
+            <li><span>Almendra</span><b data-p="10">$10</b></li>
+          </ul>
+        </div>
+
+        <div class="carta__col reveal">
+          <h4>Frappes</h4>
+          <ul class="prices prices--single">
+            <li><span>Clásico</span><b data-p="60">$60</b></li>
+            <li><span>Oreo</span><b data-p="64">$64</b></li>
+            <li><span>Chai</span><b data-p="70">$70</b></li>
+            <li><span>Matcha</span><b data-p="70">$70</b></li>
+            <li><span>Taro</span><b data-p="70">$70</b></li>
+            <li><span>Coco</span><b data-p="70">$70</b></li>
+            <li><span>Mazapán</span><b data-p="75">$75</b></li>
+            <li><span>Caramel</span><b data-p="75">$75</b></li>
+            <li><span>Chocomenta</span><b data-p="70">$70</b></li>
+            <li><span>Affogato</span><b data-p="62">$62</b></li>
+            <li><span>Moka</span><b data-p="60">$60</b></li>
+          </ul>
+          <h4>Smoothies</h4>
+          <ul class="prices prices--single">
+            <li><span>Mango</span><b data-p="75">$75</b></li>
+            <li><span>Fresa</span><b data-p="70">$70</b></li>
+            <li><span>Frutos rojos</span><b data-p="70">$70</b></li>
+            <li><span>Maracuyá</span><b data-p="70">$70</b></li>
+          </ul>
+        </div>
+
+        <figure class="carta__photo reveal">
+          <img src="menu-800.webp" srcset="menu-800.webp 800w, menu-1600.webp 1600w" sizes="(max-width:900px) 80vw, 26vw" width="1600" height="2844" loading="lazy" decoding="async" alt="Pizarrón con la carta de Infinito Café">
+        </figure>
+      </div>
+      <p class="note" id="curNote" aria-live="polite">Precios en pesos mexicanos (MXN). CH = chico · MD = mediano · G = grande.</p>
+    </section>
+
+    <!-- ESPACIO -->
+    <section class="espacio pad" id="espacio">
+      <div class="espacio__head reveal">
+        <p class="eyebrow">El espacio</p>
+        <h3>Piedra, madera y un poco de verde</h3>
+      </div>
+      <div class="espacio__grid">
+        <figure class="reveal"><img src="entrada-800.webp" srcset="entrada-800.webp 800w, entrada-1600.webp 1600w" sizes="(max-width:900px) 100vw, 45vw" width="1600" height="2844" loading="lazy" decoding="async" alt="Entrada con reja de herrería y patio con palma"><figcaption>La entrada</figcaption></figure>
+        <figure class="reveal"><img src="jarabes-800.webp" srcset="jarabes-800.webp 800w, jarabes-1600.webp 1600w" sizes="(max-width:900px) 100vw, 45vw" width="1600" height="900" loading="lazy" decoding="async" alt="Repisas con jarabes sobre muro de cantera"><figcaption>Los jarabes</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- HORARIO -->
+    <section class="horario pad" id="horario">
+      <figure class="horario__photo reveal">
+        <img src="horario-800.webp" srcset="horario-800.webp 800w, horario-1600.webp 1600w" sizes="(max-width:900px) 80vw, 35vw" width="1600" height="2844" loading="lazy" decoding="async" alt="Pizarrón con el horario de Infinito Café">
+      </figure>
+      <div class="horario__text reveal">
+        <p class="eyebrow">Horario</p>
+        <dl>
+          <dt>Lunes a viernes</dt><dd>7:00 am — 9:30 pm</dd>
+          <dt>Sábado</dt><dd>7:00 am — 8:00 pm</dd>
+        </dl>
+        <p class="note">Dirección y redes: por agregar.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer pad">
+    <span>Infinito <em>Café</em></span>
+    <small>© <span id="year">2026</span></small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
